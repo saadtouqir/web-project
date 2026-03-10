@@ -7,7 +7,7 @@
     <!-- Updated Meta Description for Crypto Wallet Website -->
     <meta name="description" content="Secure and easy-to-use crypto wallet platform to store, send, and manage your digital assets safely. Experience fast transactions, real-time tracking, and full control of your cryptocurrency.">
     
-    <title>SecureVault | Crypto Wallet</title>
+    <title>SecureVault Crypto Wallet | Assest Management</title>
 </head>
 <body>
 
@@ -50,10 +50,102 @@
         </article>
     </main>
 
-    <!-- Footer -->
+   <br>
+
+</body>
+
+<form aria-label="SecureVault Account Registration Form">
+
+<!-- Full Name -->
+<div>
+<label for="fullname">Full Name</label><br>
+<input 
+type="text"
+id="fullname"
+name="fullname"
+placeholder="enter your full name"
+required
+aria-required="true"
+tabindex="1">
+</div>
+
+<br>
+
+<!-- Email -->
+<div>
+<label for="email">Email Address</label><br>
+<input 
+type="email"
+id="email"
+name="email"
+placeholder="email@example.com"
+required
+aria-required="true"
+tabindex="2">
+</div>
+
+<br>
+
+<!-- Password -->
+<div>
+<label for="password">Password</label><br>
+<input 
+type="password"
+id="password"
+name="password"
+placeholder="Create a strong password"
+required
+aria-required="true"
+tabindex="3"
+aria-describedby="passwordHelp">
+
+<small id="passwordHelp">
+Password must contain at least 8 characters.
+</small>
+</div>
+
+<br>
+
+<!-- Wallet Type -->
+<div>
+<label for="wallet">Select Wallet Type</label><br>
+<select id="wallet" name="wallet" tabindex="4" aria-label="Select wallet type">
+<option value="">Choose wallet type</option>
+<option value="bitcoin">Bitcoin Wallet</option>
+<option value="ethereum">Ethereum Wallet</option>
+<option value="multi">Multi-Currency Wallet</option>
+</select>
+</div>
+
+<br>
+
+<!-- Terms and Conditions -->
+<div>
+<input 
+type="checkbox"
+id="terms"
+name="terms"
+required
+aria-required="true"
+tabindex="5">
+
+<label for="terms">
+I agree to the SecureVault Terms and Security Policy
+</label>
+</div>
+
+<br>
+
+<!-- Submit Button -->
+<button type="submit" tabindex="6">
+Create Wallet
+</button>
+
+</form>
+
+ <!-- Footer -->
     <footer>
         <p>&copy; 2026 Muhammad Saad. All rights reserved.</p>
     </footer>
 
-</body>
 </html>
