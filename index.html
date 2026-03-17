@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     
-    <!-- Updated Meta Description for Crypto Wallet Website -->
     <meta name="description" content="Secure and easy-to-use crypto wallet platform to store, send, and manage your digital assets safely. Experience fast transactions, real-time tracking, and full control of your cryptocurrency.">
      
-    <title>SecureVault Crypto Wallet | Assest Management</title>
+    <title>SecureVault Crypto Wallet | Asset Management</title>
 </head>
 <body>
 
@@ -15,6 +15,14 @@
     <header>
         <nav>
             <h2>SecureVault</h2>
+
+            <!-- Hamburger for mobile -->
+            <div class="hamburger" onclick="toggleMenu()">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+
             <ul>
                 <li><a href="#">Home</a></li>
                 <li><a href="#">Features</a></li>
@@ -44,106 +52,112 @@
                 fast, and secure.
             </p>
 
-            <!-- Crypto-related Image -->
             <img src="https://via.placeholder.com/400x200"
                  alt="Illustration of a secure digital cryptocurrency wallet interface">
         </article>
+
+        <!-- Features Section with Responsive Grid -->
+        <section class="features-grid">
+            <h2>Key Features of SecureVault</h2>
+            <div class="grid-container">
+                <div class="grid-item">
+                    <h3>Secure Storage</h3>
+                    <p>Keep your crypto safe with advanced encryption and multi-layer security.</p>
+                </div>
+                <div class="grid-item">
+                    <h3>Fast Transactions</h3>
+                    <p>Send and receive cryptocurrencies instantly with minimal delays.</p>
+                </div>
+                <div class="grid-item">
+                    <h3>Multi-Currency Wallet</h3>
+                    <p>Manage Bitcoin, Ethereum, and many other coins in one wallet.</p>
+                </div>
+                <div class="grid-item">
+                    <h3>Real-Time Tracking</h3>
+                    <p>Monitor all your transactions and portfolio balances in real-time.</p>
+                </div>
+                <div class="grid-item">
+                    <h3>Beginner Friendly</h3>
+                    <p>Easy-to-use interface for both beginners and advanced traders.</p>
+                </div>
+                <div class="grid-item">
+                    <h3>24/7 Support</h3>
+                    <p>Our team is always available to help you with any issues.</p>
+                </div>
+                <div class="grid-item">
+                    <h3>Privacy Protection</h3>
+                    <p>Your data and transactions are fully confidential and secure.</p>
+                </div>
+                <div class="grid-item">
+                    <h3>Regular Updates</h3>
+                    <p>Stay updated with the latest security patches and feature improvements.</p>
+                </div>
+            </div>
+        </section>
+
+        <br>
+
+        <!-- Registration Form -->
+        <form action="#" method="post">
+            <h2>SecureVault Account Registration Form</h2>
+
+            <div>
+                <label for="fullname">Full Name</label><br>
+                <input type="text" id="fullname" name="fullname" placeholder="Enter your full name" required tabindex="1">
+            </div>
+
+            <br>
+
+            <div>
+                <label for="email">Email Address</label><br>
+                <input type="email" id="email" name="email" placeholder="email@example.com" required tabindex="2">
+            </div>
+
+            <br>
+
+            <div>
+                <label for="password">Password</label><br>
+                <input type="password" id="password" name="password" placeholder="Create a strong password" required tabindex="3" aria-describedby="passwordHelp">
+                <small id="passwordHelp">Password must contain at least 8 characters.</small>
+            </div>
+
+            <br>
+
+            <div>
+                <label for="wallet">Select Wallet Type</label><br>
+                <select id="wallet" name="wallet" tabindex="4" aria-label="Select wallet type">
+                    <option value="">Choose wallet type</option>
+                    <option value="bitcoin">Bitcoin Wallet</option>
+                    <option value="ethereum">Ethereum Wallet</option>
+                    <option value="multi">Multi-Currency Wallet</option>
+                </select>
+            </div>
+
+            <br>
+
+            <div>
+                <input type="checkbox" id="terms" name="terms" required tabindex="5">
+                <label for="terms">I agree to the SecureVault Terms and Security Policy</label>
+            </div>
+
+            <br>
+
+            <button type="submit" tabindex="6">Create Wallet</button>
+        </form>
     </main>
 
-   <br>
-
-<form action="#" method="post">
-
-<h2>SecureVault Account Registration Form</h2>
-
-<!-- Full Name -->
-<div>
-<label for="fullname">Full Name</label><br>
-<input 
-type="text"
-id="fullname"
-name="fullname"
-placeholder="Enter your full name"
-required
-tabindex="1">
-</div>
-
-<br>
-
-<!-- Email -->
-<div>
-<label for="email">Email Address</label><br>
-<input 
-type="email"
-id="email"
-name="email"
-placeholder="email@example.com"
-required
-tabindex="2">
-</div>
-
-<br>
-
-<!-- Password -->
-<div>
-<label for="password">Password</label><br>
-<input 
-type="password"
-id="password"
-name="password"
-placeholder="Create a strong password"
-required
-tabindex="3"
-aria-describedby="passwordHelp">
-
-<small id="passwordHelp">
-Password must contain at least 8 characters.
-</small>
-</div>
-
-<br>
-
-<!-- Wallet Type -->
-<div>
-<label for="wallet">Select Wallet Type</label><br>
-<select id="wallet" name="wallet" tabindex="4" aria-label="Select wallet type">
-<option value="">Choose wallet type</option>
-<option value="bitcoin">Bitcoin Wallet</option>
-<option value="ethereum">Ethereum Wallet</option>
-<option value="multi">Multi-Currency Wallet</option>
-</select>
-</div>
-
-<br>
-
-<!-- Terms and Conditions -->
-<div>
-<input 
-type="checkbox"
-id="terms"
-name="terms"
-required
-tabindex="5">
-
-<label for="terms">
-I agree to the SecureVault Terms and Security Policy
-</label>
-</div>
-
-<br>
-
-<!-- Submit Button -->
-<button type="submit" tabindex="6">
-Create Wallet
-</button>
-
-</form>
-
- <!-- Footer -->
-<footer>
+    <!-- Footer -->
+    <footer>
         <p>&copy; 2026 Muhammad Saad. All rights reserved.</p>
-</footer>
+    </footer>
+
+    <!-- Mobile Hamburger Script -->
+    <script>
+        function toggleMenu() {
+            const menu = document.querySelector('nav ul');
+            menu.classList.toggle('active');
+        }
+    </script>
 
 </body>
-
 </html>

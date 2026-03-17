@@ -1,0 +1,194 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styling */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f9f9f9;
+    color: #333;
+    padding: 0;
+    margin: 0;
+}
+
+/* Header & Navigation */
+header {
+    background-color: #1e1e1e;
+    color: #fff;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.8rem 1rem;
+    flex-wrap: wrap;
+}
+
+nav h2 {
+    font-size: 1.5rem;
+}
+
+/* Menu links */
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 1rem;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #f39c12;
+}
+
+/* Hamburger button (mobile) */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 5px;
+}
+
+.hamburger div {
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+}
+
+/* Responsive menu - mobile */
+@media (max-width: 768px) {
+    nav ul {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: #1e1e1e;
+        margin-top: 0.5rem;
+    }
+
+    nav ul.active {
+        display: flex;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+}
+
+/* Main Content */
+main {
+    padding: 2rem 1rem;
+}
+
+article img {
+    max-width: 100%;
+    margin-top: 1rem;
+}
+
+/* Features Grid Section */
+.features-grid {
+    padding: 2rem 1rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.features-grid h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 2rem;
+    color: #1e1e1e;
+}
+
+.features-grid .grid-container {
+    display: grid;
+    grid-template-columns: 1fr; /* Mobile: 1 column */
+    gap: 1.5rem;
+}
+
+.features-grid .grid-item {
+    background-color: #1e1e1e;
+    color: #fff;
+    padding: 1.5rem;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.features-grid .grid-item h3 {
+    margin-bottom: 0.5rem;
+    font-size: 1.2rem;
+}
+
+.features-grid .grid-item p {
+    font-size: 0.95rem;
+    color: #ddd;
+}
+
+/* Desktop: 4 columns */
+@media (min-width: 992px) {
+    .features-grid .grid-container {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+/* Tablet: 2 columns */
+@media (min-width: 600px) and (max-width: 991px) {
+    .features-grid .grid-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Form styling */
+form {
+    background-color: #fff;
+    padding: 2rem;
+    margin: 2rem 1rem;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+form h2 {
+    margin-bottom: 1rem;
+}
+
+form div {
+    margin-bottom: 1rem;
+}
+
+form input, form select, form button {
+    width: 100%;
+    padding: 0.7rem;
+    margin-top: 0.3rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+form button {
+    background-color: #1e1e1e;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+form button:hover {
+    background-color: #f39c12;
+}
+
+/* Footer */
+footer {
+    background-color: #1e1e1e;
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
+    margin-top: 2rem;
+}
