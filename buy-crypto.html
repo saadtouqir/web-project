@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SecureVault | Buy Crypto</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="buy-crypto.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Navigation -->
+    <header>
+        <nav>
+            <h2>SecureVault</h2>
+
+            <div class="hamburger" onclick="toggleMenu()">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+
+            <ul>
+                <li><a href="index.html">Home</a></li>
+
+                <li class="dropdown">
+                    <a href="#">Features <span class="arrow">&#9662;</span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="buy-crypto.html" class="active">Buy Crypto</a></li>
+                        <li><a href="nfts.html">NFTs</a></li>
+                        <li><a href="#">Forex</a></li>
+                    </ul>
+                </li>
+
+                <li><a href="#">Security</a></li>
+                <li><a href="#">Support</a></li>
+                <li><a href="#">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <article class="buy-article">
+
+            <h1>Store Your Crypto with SecureVault</h1>
+            <p>
+                SecureVault is a secure digital wallet that lets you safely store your cryptocurrency in one place.
+                Whether you hold Bitcoin, Ethereum, or any other digital asset, SecureVault keeps it protected with
+                advanced encryption so only you have access to your funds.
+            </p>
+            <p>Simple to use, always secure, and available whenever you need it.</p>
+
+            <!-- Supported Coins Table -->
+            <h2 class="table-heading">Supported Cryptocurrencies</h2>
+            <p>Here are some of the digital assets you can store in your SecureVault wallet:</p>
+
+            <table class="crypto-table">
+                <thead>
+                    <tr>
+                        <th>Coin</th>
+                        <th>Symbol</th>
+                        <th>Type</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Bitcoin</td>
+                        <td class="symbol">BTC</td>
+                        <td>Digital Currency</td>
+                    </tr>
+                    <tr class="alt-row">
+                        <td>Ethereum</td>
+                        <td class="symbol">ETH</td>
+                        <td>Smart Contract Platform</td>
+                    </tr>
+                    <tr>
+                        <td>Solana</td>
+                        <td class="symbol">SOL</td>
+                        <td>Smart Contract Platform</td>
+                    </tr>
+                    <tr class="alt-row">
+                        <td>Litecoin</td>
+                        <td class="symbol">LTC</td>
+                        <td>Digital Currency</td>
+                    </tr>
+                    <tr>
+                        <td>Cardano</td>
+                        <td class="symbol">ADA</td>
+                        <td>Smart Contract Platform</td>
+                    </tr>
+                    <tr class="alt-row">
+                        <td>USD Coin</td>
+                        <td class="symbol">USDC</td>
+                        <td>Stablecoin</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <!-- CTA -->
+            <div class="cta-box">
+                <h2>Ready to Store Your Crypto?</h2>
+                <p>Download SecureVault today and start storing your digital assets safely and securely.</p>
+                <a href="#" class="cta-btn">⬇ Download SecureVault</a>
+            </div>
+
+        </article>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+
+            <!-- Brand -->
+            <div class="footer-brand">
+                <h3>SecureVault</h3>
+                <p>Your trusted digital wallet for crypto, NFTs, and forex. Secure, fast, and always available.</p>
+                <div class="social-icons">
+                    <a href="#" aria-label="Twitter/X">𝕏</a>
+                    <a href="#" aria-label="Facebook">f</a>
+                    <a href="#" aria-label="Instagram">ig</a>
+                    <a href="#" aria-label="LinkedIn">in</a>
+                </div>
+            </div>
+
+            <!-- Quick Links -->
+            <div class="footer-col">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="buy-crypto.html">Buy Crypto</a></li>
+                    <li><a href="nfts.html">NFTs</a></li>
+                    <li><a href="forex.html">Forex</a></li>
+                    <li><a href="#">Security</a></li>
+                    <li><a href="#">Support</a></li>
+                </ul>
+            </div>
+
+            <!-- Support -->
+            <div class="footer-col">
+                <h4>Support</h4>
+                <p>Have a question? Reach out to us:</p>
+                <a href="mailto:support@securevault.com" class="footer-email">support@securevault.com</a>
+            </div>
+
+            <!-- Download App -->
+            <div class="footer-col">
+                <h4>Download App</h4>
+                <p>Get SecureVault on your phone:</p>
+                <a href="#" class="app-btn">🍎 Download on iOS</a>
+                <a href="#" class="app-btn">🤖 Get it on Android</a>
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2026 Muhammad Saad. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            document.querySelector('nav ul').classList.toggle('active');
+        }
+
+        document.querySelectorAll('.dropdown > a').forEach(item => {
+            item.addEventListener('click', function(e) {
+                if (window.innerWidth <= 768) {
+                    e.preventDefault();
+                    this.parentElement.classList.toggle('active');
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>

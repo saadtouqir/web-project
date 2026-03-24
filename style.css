@@ -1,57 +1,92 @@
-/* Basic Reset */
+/* ===========================
+   RESET
+   =========================== */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Body styling */
+/* ===========================
+   BODY
+   =========================== */
 body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-    background-color: #f9f9f9;
+    font-family: 'Poppins', sans-serif;
+    background: #f4f7fb;
     color: #333;
-    padding: 0;
-    margin: 0;
+    line-height: 1.6;
 }
 
-/* Header & Navigation */
+/* ===========================
+   HEADER
+   =========================== */
 header {
-    background-color: #1e1e1e;
-    color: #fff;
+    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+    color: white;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
 }
 
+/* ===========================
+   IMAGE
+   =========================== */
+img {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    display: block;
+    margin: 1rem auto;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+/* ===========================
+   NAV
+   =========================== */
 nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0.8rem 1rem;
+    padding: 1rem 2rem;
     flex-wrap: wrap;
 }
 
 nav h2 {
-    font-size: 1.5rem;
+    font-size: 1.8rem;
+    font-weight: 600;
 }
 
-/* Menu links */
 nav ul {
     display: flex;
     list-style: none;
-    gap: 1rem;
+    gap: 1.5rem;
 }
 
 nav ul li a {
     color: #fff;
     text-decoration: none;
-    font-weight: bold;
-    transition: color 0.3s;
+    font-weight: 500;
+    position: relative;
 }
 
-nav ul li a:hover {
-    color: #f39c12;
+nav ul li a::after {
+    content: '';
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    background: #f39c12;
+    left: 0;
+    bottom: -5px;
+    transition: 0.3s;
 }
 
-/* Hamburger button (mobile) */
+nav ul li a:hover::after,
+nav ul li a.active::after {
+    width: 100%;
+}
+
+/* ===========================
+   HAMBURGER
+   =========================== */
 .hamburger {
     display: none;
     flex-direction: column;
@@ -62,17 +97,20 @@ nav ul li a:hover {
 .hamburger div {
     width: 25px;
     height: 3px;
-    background-color: #fff;
+    background-color: white;
 }
 
-/* Responsive menu - mobile */
+/* ===========================
+   MOBILE MENU
+   =========================== */
 @media (max-width: 768px) {
     nav ul {
         display: none;
         flex-direction: column;
         width: 100%;
-        background-color: #1e1e1e;
-        margin-top: 0.5rem;
+        background: #203a43;
+        margin-top: 1rem;
+        padding: 1rem;
     }
 
     nav ul.active {
@@ -84,118 +122,657 @@ nav ul li a:hover {
     }
 }
 
-/* Main Content */
+/* ===========================
+   MAIN
+   =========================== */
 main {
-    padding: 2rem 1rem;
+    padding: 2rem;
 }
 
-article img {
-    max-width: 100%;
-    margin-top: 1rem;
+/* ===========================
+   HERO ARTICLE
+   =========================== */
+article {
+    max-width: 900px;
+    margin: auto;
+    text-align: center;
 }
 
-/* Features Grid Section */
+article h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+article p {
+    margin-bottom: 1rem;
+    color: #555;
+}
+
+/* ===========================
+   FEATURES
+   =========================== */
 .features-grid {
-    padding: 2rem 1rem;
-    max-width: 1200px;
-    margin: 0 auto;
+    margin-top: 3rem;
 }
 
 .features-grid h2 {
     text-align: center;
     margin-bottom: 2rem;
     font-size: 2rem;
-    color: #0e0d0d;
 }
 
-.features-grid .grid-container {
+.grid-container {
     display: grid;
-    grid-template-columns: 1fr; /* Mobile: 1 column */
+    grid-template-columns: 1fr;
     gap: 1.5rem;
 }
 
-.features-grid .grid-item {
-    background-color: #c7bcbc;
-    color: #1e1a1a;
-    padding: 1.5rem;
-    border-radius: 10px;
+.grid-item {
+    background: white;
+    padding: 1.8rem;
+    border-radius: 12px;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.08);
+    transition: 0.3s;
     text-align: center;
 }
 
-.features-grid .grid-item h3 {
+.grid-item h3 {
     margin-bottom: 0.5rem;
-    font-size: 1.2rem;
 }
 
-.features-grid .grid-item p {
-    font-size: 0.95rem;
-    color: #1e1d1d;
+.grid-item:hover {
+    transform: translateY(-8px);
+    background: #f39c12;
+    color: white;
 }
 
-/* Desktop: 4 columns */
-@media (min-width: 992px) {
-    .features-grid .grid-container {
-        grid-template-columns: repeat(4, 1fr);
-    }
-}
-
-/* Tablet: 2 columns */
-@media (min-width: 600px) and (max-width: 991px) {
-    .features-grid .grid-container {
+@media (min-width: 600px) {
+    .grid-container {
         grid-template-columns: repeat(2, 1fr);
     }
 }
 
-.features-grid .grid-item:hover {
-    background-color: #f39c12; /* Orange background */
-    color: #1e1e1e;            /* Dark text for contrast */
-    transform: translateY(-5px); 
-    box-shadow: 0 8px 15px rgba(0,0,0,0.3);
+@media (min-width: 992px) {
+    .grid-container {
+        grid-template-columns: repeat(4, 1fr);
+    }
 }
 
-/* Form styling */
+/* ===========================
+   FORM
+   =========================== */
 form {
-    background-color: #fff;
+    max-width: 500px;
+    margin: 3rem auto;
+    background: white;
     padding: 2rem;
-    margin: 2rem 1rem;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.1);
 }
 
 form h2 {
-    margin-bottom: 1rem;
+    text-align: center;
+    margin-bottom: 1.5rem;
 }
 
-form div {
-    margin-bottom: 1rem;
+.form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1.2rem;
 }
 
-form input, form select, form button {
+.form-group label {
+    font-weight: 500;
+    margin-bottom: 0.4rem;
+}
+
+.form-group input,
+.form-group select {
     width: 100%;
-    padding: 0.7rem;
-    margin-top: 0.3rem;
+    padding: 0.8rem 1rem;
+    border-radius: 8px;
     border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 1rem;
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.95rem;
+    transition: 0.3s;
 }
 
+.form-group input:focus,
+.form-group select:focus {
+    border-color: #f39c12;
+    outline: none;
+}
+
+/* Checkbox */
+.checkbox-group {
+    flex-direction: row;
+    align-items: center;
+    gap: 8px;
+}
+
+.checkbox-group input[type="checkbox"] {
+    width: auto;
+}
+
+.checkbox-group label {
+    margin-bottom: 0;
+    font-weight: 400;
+}
+
+/* Submit button */
 form button {
-    background-color: #1e1e1e;
-    color: #fff;
+    width: 100%;
+    padding: 0.9rem;
     border: none;
+    background: linear-gradient(135deg, #f39c12, #e67e22);
+    color: white;
+    font-size: 1rem;
+    font-family: 'Poppins', sans-serif;
+    border-radius: 8px;
     cursor: pointer;
-    font-weight: bold;
+    margin-top: 0.5rem;
+    transition: 0.3s;
 }
 
 form button:hover {
-    background-color: #f39c12;
+    transform: scale(1.03);
 }
 
-/* Footer */
+/* ===========================
+   PASSWORD REQUIREMENTS
+   =========================== */
+.password-requirements {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+    margin-top: 0.6rem;
+}
+
+.req {
+    font-size: 0.83rem;
+    color: #e74c3c;
+    transition: color 0.3s;
+}
+
+.req.valid {
+    color: #27ae60;
+}
+
+/* ===========================
+   DROPDOWN
+   =========================== */
+.dropdown {
+    position: relative;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: #203a43;
+    list-style: none;
+    padding: 0.5rem 0;
+    border-radius: 8px;
+    min-width: 180px;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+}
+
+.dropdown-menu li a {
+    display: block;
+    padding: 0.7rem 1rem;
+    color: white;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.dropdown-menu li a:hover {
+    background: #f39c12;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+@media (max-width: 768px) {
+    .dropdown-menu {
+        position: static;
+        box-shadow: none;
+        background: #2c5364;
+    }
+
+    .dropdown:hover .dropdown-menu {
+        display: none;
+    }
+
+    .dropdown.active .dropdown-menu {
+        display: block;
+    }
+}
+
+/* ===========================
+   FOOTER
+   =========================== */
 footer {
-    background-color: #1e1e1e;
-    color: #fff;
+    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+    color: white;
+    margin-top: 3rem;
+}
+
+.footer-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    padding: 3rem 2rem;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+@media (min-width: 600px) {
+    .footer-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 900px) {
+    .footer-container {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+.footer-brand h3 {
+    font-size: 1.6rem;
+    font-weight: 600;
+    margin-bottom: 0.8rem;
+    color: #f39c12;
+}
+
+.footer-brand p {
+    color: #ccc;
+    font-size: 0.9rem;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+}
+
+.social-icons {
+    display: flex;
+    gap: 0.8rem;
+    margin-top: 0.5rem;
+}
+
+.social-icons a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    background: rgba(255,255,255,0.1);
+    border-radius: 50%;
+    color: white;
+    text-decoration: none;
+    font-size: 0.85rem;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.social-icons a:hover {
+    background: #f39c12;
+}
+
+.footer-col h4 {
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    color: #f39c12;
+}
+
+.footer-col p {
+    color: #ccc;
+    font-size: 0.9rem;
+    margin-bottom: 0.6rem;
+}
+
+.footer-col ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-col ul li {
+    margin-bottom: 0.5rem;
+}
+
+.footer-col ul li a {
+    color: #ccc;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: 0.3s;
+}
+
+.footer-col ul li a:hover {
+    color: #f39c12;
+}
+
+.footer-email {
+    color: #f39c12;
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.footer-email:hover {
+    text-decoration: underline;
+}
+
+.app-btn {
+    display: block;
+    margin-top: 0.6rem;
+    padding: 0.6rem 1rem;
+    background: rgba(255,255,255,0.1);
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    transition: 0.3s;
     text-align: center;
-    padding: 1rem;
+}
+
+.app-btn:hover {
+    background: #f39c12;
+}
+
+.footer-bottom {
+    border-top: 1px solid rgba(255,255,255,0.1);
+    text-align: center;
+    padding: 1rem 2rem;
+    color: #aaa;
+    font-size: 0.85rem;
+}
+
+/* BUY CRYPTO PAGE STYLES */
+
+/* Article Container */
+.buy-article {
+    max-width: 700px;
+    margin: 3rem auto;
+    text-align: center;
+}
+
+.buy-article h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.buy-article p {
+    color: #555;
+    margin-bottom: 1rem;
+}
+
+/* Table Heading */
+.table-heading {
     margin-top: 2rem;
+    margin-bottom: 0.8rem;
+    font-size: 1.8rem;
+}
+
+/* Crypto Table */
+.crypto-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1.5rem;
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.08);
+}
+
+.crypto-table thead tr {
+    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+    color: white;
+}
+
+.crypto-table th {
+    padding: 1rem;
+    font-weight: 600;
+}
+
+.crypto-table td {
+    padding: 0.9rem;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.crypto-table .alt-row {
+    background: #fafafa;
+}
+
+.crypto-table .symbol {
+    color: #f39c12;
+    font-weight: 600;
+}
+
+/* CTA Box */
+.cta-box {
+    margin-top: 3rem;
+    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+    border-radius: 12px;
+    padding: 2.5rem;
+    color: white;
+}
+
+.cta-box h2 {
+    margin-bottom: 0.8rem;
+    font-size: 1.8rem;
+}
+
+.cta-box p {
+    color: #ccc;
+    margin-bottom: 1.5rem;
+}
+
+.cta-btn {
+    display: inline-block;
+    padding: 0.85rem 2rem;
+    background: linear-gradient(135deg, #f39c12, #e67e22);
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: 0.3s;
+}
+
+.cta-btn:hover {
+    transform: scale(1.05);
+}
+
+/* NFTS PAGE STYLES */
+
+/* Article Container */
+.nft-article {
+    max-width: 700px;
+    margin: 3rem auto;
+    text-align: center;
+}
+
+.nft-article h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.nft-article p {
+    color: #555;
+    margin-bottom: 1rem;
+}
+
+/* Table Heading */
+.table-heading {
+    margin-top: 2rem;
+    margin-bottom: 0.8rem;
+    font-size: 1.8rem;
+}
+
+/* NFT Table */
+.nft-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1.5rem;
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.08);
+}
+
+.nft-table thead tr {
+    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+    color: white;
+}
+
+.nft-table th {
+    padding: 1rem;
+    font-weight: 600;
+}
+
+.nft-table td {
+    padding: 0.9rem;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.nft-table .alt-row {
+    background: #fafafa;
+}
+
+.nft-table .symbol {
+    color: #f39c12;
+    font-weight: 600;
+}
+
+/* CTA Box */
+.cta-box {
+    margin-top: 3rem;
+    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+    border-radius: 12px;
+    padding: 2.5rem;
+    color: white;
+}
+
+.cta-box h2 {
+    margin-bottom: 0.8rem;
+    font-size: 1.8rem;
+}
+
+.cta-box p {
+    color: #ccc;
+    margin-bottom: 1.5rem;
+}
+
+.cta-btn {
+    display: inline-block;
+    padding: 0.85rem 2rem;
+    background: linear-gradient(135deg, #f39c12, #e67e22);
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: 0.3s;
+}
+
+.cta-btn:hover {
+    transform: scale(1.05);
+}
+
+/* FOREX PAGE STYLES */
+
+/* Article Container */
+.forex-article {
+    max-width: 700px;
+    margin: 3rem auto;
+    text-align: center;
+}
+
+.forex-article h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.forex-article p {
+    color: #555;
+    margin-bottom: 1rem;
+}
+
+/* Table Heading */
+.table-heading {
+    margin-top: 2rem;
+    margin-bottom: 0.8rem;
+    font-size: 1.8rem;
+}
+
+/* Forex Table */
+.forex-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1.5rem;
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.08);
+}
+
+.forex-table thead tr {
+    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+    color: white;
+}
+
+.forex-table th {
+    padding: 1rem;
+    font-weight: 600;
+}
+
+.forex-table td {
+    padding: 0.9rem;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.forex-table .alt-row {
+    background: #fafafa;
+}
+
+.forex-table .symbol {
+    color: #f39c12;
+    font-weight: 600;
+}
+
+/* CTA Box */
+.cta-box {
+    margin-top: 3rem;
+    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+    border-radius: 12px;
+    padding: 2.5rem;
+    color: white;
+}
+
+.cta-box h2 {
+    margin-bottom: 0.8rem;
+    font-size: 1.8rem;
+}
+
+.cta-box p {
+    color: #ccc;
+    margin-bottom: 1.5rem;
+}
+
+.cta-btn {
+    display: inline-block;
+    padding: 0.85rem 2rem;
+    background: linear-gradient(135deg, #f39c12, #e67e22);
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: 0.3s;
+}
+
+.cta-btn:hover {
+    transform: scale(1.05);
 }
