@@ -1,15 +1,11 @@
-/* ===========================
-   RESET
-   =========================== */
+/* RESET */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* ===========================
-   BODY
-   =========================== */
+/* BODY */
 body {
     font-family: 'Poppins', sans-serif;
     background: #f4f7fb;
@@ -17,18 +13,14 @@ body {
     line-height: 1.6;
 }
 
-/* ===========================
-   HEADER
-   =========================== */
+/* HEADER */
 header {
     background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
     color: white;
     box-shadow: 0 4px 10px rgba(0,0,0,0.2);
 }
 
-/* ===========================
-   IMAGE
-   =========================== */
+/* IMAGE */
 img {
     width: 100%;
     max-width: 400px;
@@ -39,9 +31,7 @@ img {
     box-shadow: 0 5px 15px rgba(0,0,0,0.2);
 }
 
-/* ===========================
-   NAV
-   =========================== */
+/* NAV */
 nav {
     display: flex;
     justify-content: space-between;
@@ -84,9 +74,7 @@ nav ul li a.active::after {
     width: 100%;
 }
 
-/* ===========================
-   HAMBURGER
-   =========================== */
+/* HAMBURGER */
 .hamburger {
     display: none;
     flex-direction: column;
@@ -100,9 +88,7 @@ nav ul li a.active::after {
     background-color: white;
 }
 
-/* ===========================
-   MOBILE MENU
-   =========================== */
+/* MOBILE MENU */
 @media (max-width: 768px) {
     nav ul {
         display: none;
@@ -122,16 +108,12 @@ nav ul li a.active::after {
     }
 }
 
-/* ===========================
-   MAIN
-   =========================== */
+/* MAIN */
 main {
     padding: 2rem;
 }
 
-/* ===========================
-   HERO ARTICLE
-   =========================== */
+/* HERO ARTICLE */
 article {
     max-width: 900px;
     margin: auto;
@@ -148,9 +130,7 @@ article p {
     color: #555;
 }
 
-/* ===========================
-   FEATURES
-   =========================== */
+/* FEATURES */
 .features-grid {
     margin-top: 3rem;
 }
@@ -198,9 +178,7 @@ article p {
     }
 }
 
-/* ===========================
-   FORM
-   =========================== */
+/* FORM */
 form {
     max-width: 500px;
     margin: 3rem auto;
@@ -278,9 +256,7 @@ form button:hover {
     transform: scale(1.03);
 }
 
-/* ===========================
-   PASSWORD REQUIREMENTS
-   =========================== */
+/* PASSWORD REQUIREMENTS */
 .password-requirements {
     display: flex;
     flex-direction: column;
@@ -298,9 +274,7 @@ form button:hover {
     color: #27ae60;
 }
 
-/* ===========================
-   DROPDOWN
-   =========================== */
+/* DROPDOWN */
 .dropdown {
     position: relative;
 }
@@ -350,9 +324,7 @@ form button:hover {
     }
 }
 
-/* ===========================
-   FOOTER
-   =========================== */
+/* FOOTER */
 footer {
     background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
     color: white;
