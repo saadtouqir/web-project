@@ -461,9 +461,18 @@ footer {
     font-size: 0.85rem;
 }
 
-/* BUY CRYPTO PAGE STYLES */
+/* ===========================
+   BUY CRYPTO PAGE STYLES
+   =========================== */
 
-/* Article Container */
+/* ===== BODY ===== */
+body {
+    background: #f5f7fa;
+}
+
+/* ===========================
+   HERO / ARTICLE
+   =========================== */
 .buy-article {
     max-width: 700px;
     margin: 3rem auto;
@@ -478,16 +487,174 @@ footer {
 .buy-article p {
     color: #555;
     margin-bottom: 1rem;
+    line-height: 1.6;
 }
 
-/* Table Heading */
+/* ===========================
+   LIVE PRICES SECTION
+   =========================== */
+.live-section {
+    max-width: 900px;
+    margin: 2rem auto;
+}
+
+/* Header */
+.live-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+/* Title */
+.live-header h2 {
+    font-size: 1.7rem;
+}
+
+/* Meta info */
+.live-meta {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.85rem;
+    color: #555;
+}
+
+/* Live dot */
+.live-dot {
+    width: 8px;
+    height: 8px;
+    background: #27ae60;
+    border-radius: 50%;
+    animation: pulse 1.5s infinite;
+}
+
+/* Pulse animation */
+@keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.3; }
+}
+
+/* Refresh button */
+.refresh-btn {
+    padding: 0.4rem 0.8rem;
+    background: linear-gradient(135deg, #f39c12, #e67e22);
+    border: none;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.8rem;
+    transition: 0.3s;
+}
+
+.refresh-btn:hover {
+    transform: scale(1.05);
+}
+
+/* Spinner */
+.spinner {
+    width: 30px;
+    height: 30px;
+    border: 3px solid #eee;
+    border-top: 3px solid #f39c12;
+    border-radius: 50%;
+    animation: spin 0.7s linear infinite;
+    margin: 1rem auto;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+/* Hidden */
+.hidden {
+    display: none !important;
+}
+
+/* Error */
+.price-error {
+    background: #fdecea;
+    color: #e74c3c;
+    padding: 0.6rem;
+    border-radius: 6px;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+/* ===========================
+   PRICE CARDS
+   =========================== */
+.price-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+}
+
+/* Tablet */
+@media (min-width: 600px) {
+    .price-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Desktop */
+@media (min-width: 900px) {
+    .price-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* Card */
+.price-card {
+    background: white;
+    border-radius: 10px;
+    padding: 1.2rem;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+    transition: 0.3s;
+}
+
+.price-card:hover {
+    transform: translateY(-4px);
+}
+
+/* Card content */
+.price-icon {
+    font-size: 1.6rem;
+    margin-bottom: 0.3rem;
+}
+
+.price-name {
+    font-weight: 600;
+}
+
+.price-symbol {
+    font-size: 0.8rem;
+    color: #888;
+}
+
+.price-amount {
+    margin-top: 0.4rem;
+    font-weight: 600;
+    color: #2c3e50;
+}
+
+/* ===========================
+   TABLE SECTION
+   =========================== */
+.table-section {
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+}
+
 .table-heading {
     margin-top: 2rem;
     margin-bottom: 0.8rem;
     font-size: 1.8rem;
 }
 
-/* Crypto Table */
+/* Table */
 .crypto-table {
     width: 100%;
     border-collapse: collapse;
@@ -498,6 +665,7 @@ footer {
     box-shadow: 0 6px 15px rgba(0, 0, 0, 0.08);
 }
 
+/* Header */
 .crypto-table thead tr {
     background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
     color: white;
@@ -508,125 +676,35 @@ footer {
     font-weight: 600;
 }
 
+/* Rows */
 .crypto-table td {
     padding: 0.9rem;
     border-bottom: 1px solid #f0f0f0;
 }
 
-.crypto-table .alt-row {
+.crypto-table tr:nth-child(even) {
     background: #fafafa;
 }
 
+/* Symbol */
 .crypto-table .symbol {
     color: #f39c12;
     font-weight: 600;
 }
 
-/* CTA Box */
+/* ===========================
+   CTA BOX
+   =========================== */
 .cta-box {
-    margin-top: 3rem;
+    max-width: 700px;
+    margin: 3rem auto;
     background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
     border-radius: 12px;
     padding: 2.5rem;
     color: white;
-}
-
-.cta-box h2 {
-    margin-bottom: 0.8rem;
-    font-size: 1.8rem;
-}
-
-.cta-box p {
-    color: #ccc;
-    margin-bottom: 1.5rem;
-}
-
-.cta-btn {
-    display: inline-block;
-    padding: 0.85rem 2rem;
-    background: linear-gradient(135deg, #f39c12, #e67e22);
-    color: white;
-    text-decoration: none;
-    border-radius: 8px;
-    font-weight: 600;
-    font-size: 1rem;
-    transition: 0.3s;
-}
-
-.cta-btn:hover {
-    transform: scale(1.05);
-}
-
-/* NFTS PAGE STYLES */
-
-/* Article Container */
-.nft-article {
-    max-width: 700px;
-    margin: 3rem auto;
     text-align: center;
 }
 
-.nft-article h1 {
-    font-size: 2.5rem;
-    margin-bottom: 1rem;
-}
-
-.nft-article p {
-    color: #555;
-    margin-bottom: 1rem;
-}
-
-/* Table Heading */
-.table-heading {
-    margin-top: 2rem;
-    margin-bottom: 0.8rem;
-    font-size: 1.8rem;
-}
-
-/* NFT Table */
-.nft-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 1.5rem;
-    background: white;
-    border-radius: 12px;
-    overflow: hidden;
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.08);
-}
-
-.nft-table thead tr {
-    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
-    color: white;
-}
-
-.nft-table th {
-    padding: 1rem;
-    font-weight: 600;
-}
-
-.nft-table td {
-    padding: 0.9rem;
-    border-bottom: 1px solid #f0f0f0;
-}
-
-.nft-table .alt-row {
-    background: #fafafa;
-}
-
-.nft-table .symbol {
-    color: #f39c12;
-    font-weight: 600;
-}
-
-/* CTA Box */
-.cta-box {
-    margin-top: 3rem;
-    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
-    border-radius: 12px;
-    padding: 2.5rem;
-    color: white;
-}
-
 .cta-box h2 {
     margin-bottom: 0.8rem;
     font-size: 1.8rem;
@@ -637,6 +715,7 @@ footer {
     margin-bottom: 1.5rem;
 }
 
+/* Button */
 .cta-btn {
     display: inline-block;
     padding: 0.85rem 2rem;
@@ -651,6 +730,25 @@ footer {
 
 .cta-btn:hover {
     transform: scale(1.05);
+}
+
+/* ===========================
+   MOBILE FIX
+   =========================== */
+@media (max-width: 500px) {
+
+    .buy-article h1 {
+        font-size: 1.9rem;
+    }
+
+    .live-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .refresh-btn {
+        width: 100%;
+    }
 }
 
 /* FOREX PAGE STYLES */
