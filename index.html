@@ -34,9 +34,7 @@
  
                 <li><a href="security.html">Security</a></li>
                 <li><a href="support.html">Support</a></li>
-                <li><a href="login.html">Login</a>
-
-                </li>
+                <li><a href="register.html">Register</a></li>
             </ul>
         </nav>
     </header>
@@ -44,7 +42,7 @@
     <!-- Main Content -->
     <main>
         <article>
-            <h1>Your Digital Crypto Wallet. Fully Protected.</h1>
+            <h1>SecureVault Digital Crypto Wallet</h1>
             <p>
                 SecureVault is a modern cryptocurrency wallet designed to help you store, send, and receive digital currencies with confidence.
                 Our platform provides advanced encryption, real-time transaction tracking, and an intuitive dashboard.
@@ -94,49 +92,6 @@
             </div>
         </section>
 
-        <!-- Registration Form -->
-        <form action="#" method="post" onsubmit="return validateForm()">
-            <h2>SecureVault Account Registration Form</h2>
-
-            <div class="form-group">
-                <label for="fullname">Full Name</label>
-                <input type="text" id="fullname" name="fullname" placeholder="Enter your full name" required tabindex="1">
-            </div>
-
-            <div class="form-group">
-                <label for="email">Email Address</label>
-                <input type="email" id="email" name="email" placeholder="email@example.com" required tabindex="2">
-            </div>
-
-            <div class="form-group">
-                <label for="password">Password</label>
-                <input type="password" id="password" name="password" placeholder="Create a strong password" required tabindex="3" oninput="checkPassword()">
-                <div class="password-requirements">
-                    <span id="req-length" class="req">✖ Minimum 8 characters</span>
-                    <span id="req-upper" class="req">✖ At least one uppercase letter</span>
-                    <span id="req-number" class="req">✖ At least one number</span>
-                    <span id="req-special" class="req">✖ At least one special character (!@#$%^&*)</span>
-                </div>
-            </div>
-
-            <div class="form-group">
-                <label for="wallet">Select Wallet</label>
-                <select id="wallet" name="wallet" tabindex="4" aria-label="Select wallet type">
-                    <option value="">Choose wallet type</option>
-                    <option value="bitcoin">Bitcoin Wallet</option>
-                    <option value="ethereum">Ethereum Wallet</option>
-                    <option value="multi">Multi-Currency Wallet</option>
-                </select>
-            </div>
-
-            <div class="form-group checkbox-group">
-                <input type="checkbox" id="terms" name="terms" required tabindex="5">
-                <label for="terms">I agree to the SecureVault Terms and Security Policy</label>
-            </div>
-
-            <button type="submit" tabindex="6">Create Wallet</button>
-        </form>
-
     </main>
 
     <!-- Footer -->
@@ -146,12 +101,7 @@
             <div class="footer-brand">
                 <h3>SecureVault</h3>
                 <p>Your trusted digital wallet for crypto, NFTs, and forex. Secure, fast, and always available.</p>
-                <div class="social-icons">
-                    <a href="#" aria-label="Twitter/X">𝕏</a>
-                    <a href="#" aria-label="Facebook">f</a>
-                    <a href="#" aria-label="Instagram">ig</a>
-                    <a href="#" aria-label="LinkedIn">in</a>
-                </div>
+
             </div>
 
             <div class="footer-col">
@@ -172,12 +122,7 @@
                 <a href="mailto:support@securevault.com" class="footer-email">support@securevault.com</a>
             </div>
 
-            <div class="footer-col">
-                <h4>Download App</h4>
-                <p>Get SecureVault on your phone:</p>
-                <a href="#" class="app-btn">🍎 Download on iOS</a>
-                <a href="#" class="app-btn">🤖 Get it on Android</a>
-            </div>
+
 
         </div>
 
@@ -185,8 +130,6 @@
             <p>&copy; 2026 Muhammad Saad. All rights reserved.</p>
         </div>
     </footer>
-
-    <!-- Password Validation Script -->
 
     <script>
         function toggleMenu() {
@@ -209,35 +152,6 @@
                 if(target) target.scrollIntoView({behavior:'smooth'});
             });
         });
-
-        function checkPassword() {
-            const val = document.getElementById('password').value;
-            toggle('req-length',  val.length >= 8);
-            toggle('req-upper',   /[A-Z]/.test(val));
-            toggle('req-number',  /[0-9]/.test(val));
-            toggle('req-special', /[!@#$%^&*]/.test(val));
-        }
-
-        function toggle(id, passed) {
-            const el = document.getElementById(id);
-            const text = el.textContent.slice(2);
-            if (passed) {
-                el.classList.add('valid');
-                el.textContent = '✔ ' + text;
-            } else {
-                el.classList.remove('valid');
-                el.textContent = '✖ ' + text;
-            }
-        }
-
-        function validateForm() {
-            const val = document.getElementById('password').value;
-            if (val.length < 8 || !/[A-Z]/.test(val) || !/[0-9]/.test(val) || !/[!@#$%^&*]/.test(val)) {
-                alert('Please meet all password requirements before submitting.');
-                return false;
-            }
-            return true;
-        }
     </script>
 </body>
 </html>

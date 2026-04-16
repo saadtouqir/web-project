@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SecureVault | Create Account</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="register.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<header>
+    <nav>
+        <h2>SecureVault</h2>
+
+        <div class="hamburger" onclick="toggleMenu()">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li class="dropdown">
+                <a href="#">Features <span class="arrow">&#9662;</span></a>
+                <ul class="dropdown-menu">
+                    <li><a href="buy-crypto.html">Buy Crypto</a></li>
+                    <li><a href="nfts.html">NFTs</a></li>
+                    <li><a href="forex.html">Forex</a></li>
+                </ul>
+            </li>
+            <li><a href="security.html">Security</a></li>
+            <li><a href="support.html">Support</a></li>
+            <li><a href="register.html" class="active">Register</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main class="register-main">
+    <div class="register-container">
+
+        <!-- LEFT SIDE -->
+        <div class="register-left">
+            <h2>SecureVault</h2>
+            <p>Join thousands of users managing crypto safely and confidently.</p>
+
+            <ul class="register-features">
+                <li>AES-256 Encryption</li>
+                <li>Private Key Ownership</li>
+                <li>Multi-Currency Support</li>
+                <li>24/7 Support</li>
+            </ul>
+        </div>
+
+        <!-- RIGHT SIDE -->
+        <div class="register-right">
+
+            <!-- FORM SECTION -->
+            <div id="form-section">
+                <h1>Create Account</h1>
+                <p class="register-subtitle">Set up your wallet in seconds.</p>
+
+                <form class="register-form" onsubmit="handleRegister(event)">
+
+                    <div class="form-group">
+                        <label>Full Name</label>
+                        <input type="text" id="fullname" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Email Address</label>
+                        <input type="email" id="email" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Password</label>
+                        <input type="password" id="password" oninput="checkPassword()" required>
+
+                        <div class="password-requirements">
+                            <span id="req-length" class="req">✖ Minimum 8 characters</span>
+                            <span id="req-upper" class="req">✖ One uppercase letter</span>
+                            <span id="req-number" class="req">✖ One number</span>
+                            <span id="req-special" class="req">✖ One special character</span>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Select Wallet</label>
+                        <select id="wallet">
+                            <option value="">Choose wallet</option>
+                            <option>Bitcoin</option>
+                            <option>Ethereum</option>
+                            <option>Multi-Currency</option>
+                        </select>
+                    </div>
+
+                    <div class="checkbox-row">
+                        <input type="checkbox" id="terms" required>
+                        <label for="terms">I agree to terms & policy</label>
+                    </div>
+
+                    <button type="submit" class="register-btn">Create Wallet</button>
+                </form>
+
+            </div>
+
+            <!-- SUCCESS SECTION -->
+            <div id="success-section" class="success-panel hidden">
+                <div class="success-icon">✔</div>
+                <h2>Account Created Successfully!</h2>
+                <p>Your SecureVault wallet has been created successfully.</p>
+            </div>
+
+        </div>
+    </div>
+</main>
+
+<footer>
+    <div class="footer-container">
+        <div class="footer-brand">
+            <h3>SecureVault</h3>
+            <p>Your trusted digital wallet.</p>
+        </div>
+
+        <div class="footer-col">
+            <h4>Links</h4>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#">Security</a></li>
+                <li><a href="#">Support</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-col">
+            <h4>Support</h4>
+            <a href="mailto:support@securevault.com">support@securevault.com</a>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        <p>&copy; 2026 SecureVault</p>
+    </div>
+</footer>
+
+<script>
+function toggleMenu() {
+    document.querySelector('nav ul').classList.toggle('active');
+}
+
+function checkPassword() {
+    const val = document.getElementById('password').value;
+
+    toggleReq('req-length', val.length >= 8);
+    toggleReq('req-upper', /[A-Z]/.test(val));
+    toggleReq('req-number', /[0-9]/.test(val));
+    toggleReq('req-special', /[!@#$%^&*]/.test(val));
+}
+
+function toggleReq(id, valid) {
+    const el = document.getElementById(id);
+    const text = el.textContent.slice(2);
+    el.classList.toggle('valid', valid);
+    el.textContent = (valid ? "✔ " : "✖ ") + text;
+}
+
+function handleRegister(e) {
+    e.preventDefault();
+
+    const val = document.getElementById('password').value;
+
+    if (
+        val.length < 8 ||
+        !/[A-Z]/.test(val) ||
+        !/[0-9]/.test(val) ||
+        !/[!@#$%^&*]/.test(val)
+    ) {
+        alert("Password not strong enough");
+        return;
+    }
+
+    document.getElementById('form-section').classList.add('hidden');
+    document.getElementById('success-section').classList.remove('hidden');
+}
+</script>
+
+</body>
+</html>
