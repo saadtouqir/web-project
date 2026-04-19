@@ -1,61 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SecureVault | Buy Crypto</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SecureVault | Buy Crypto</title>
 
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="buy-crypto.css">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="buy-crypto.css">
 
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
 
 <body>
 
-<!-- ================= NAV ================= -->
+<!-- NAV -->
 <header>
-    <nav>
-        <h2>SecureVault</h2>
+<nav>
+    <h2>SecureVault</h2>
 
-        <div class="hamburger" onclick="toggleMenu()">
-            <div></div>
-            <div></div>
-            <div></div>
-        </div>
+    <div class="hamburger" onclick="toggleMenu()">
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
 
-        <ul>
-            <li><a href="index.html">Home</a></li>
+    <ul>
+        <li><a href="index.html">Home</a></li>
 
-            <li class="dropdown">
-                <a href="#">Features <span class="arrow">&#9662;</span></a>
-                <ul class="dropdown-menu">
-                    <li><a href="buy-crypto.html" class="active">Buy Crypto</a></li>
-                    <li><a href="nfts.html">NFTs</a></li>
-                    <li><a href="forex.html">Forex</a></li>
-                </ul>
-            </li>
+        <li class="dropdown">
+            <a href="#">Features <span class="arrow">&#9662;</span></a>
+            <ul class="dropdown-menu">
+                <li><a href="buy-crypto.html" class="active">Buy Crypto</a></li>
+                <li><a href="nfts.html">NFTs</a></li>
+                <li><a href="forex.html">Forex</a></li>
+            </ul>
+        </li>
 
-            <li><a href="security.html">Security</a></li>
-            <li><a href="support.html">Support</a></li>
-            <li><a href="register.html">Register</a></li>
-        </ul>
-    </nav>
+        <li><a href="security.html">Security</a></li>
+        <li><a href="support.html">Support</a></li>
+        <li><a href="register.html">Register</a></li>
+    </ul>
+</nav>
 </header>
 
-<!-- ================= MAIN ================= -->
+
+<!-- MAIN -->
 <main>
 
 <!-- HERO -->
 <article class="buy-article">
     <h1>Store Your Crypto with SecureVault</h1>
+
     <p>
         SecureVault is a secure digital wallet that lets you safely store your cryptocurrency in one place.
-        Whether you hold Bitcoin, Ethereum, or any other digital asset, your funds stay protected.
+        Whether you hold Bitcoin, Ethereum, or other digital assets, your funds stay protected.
     </p>
 </article>
 
-<!-- ================= LIVE API SECTION ================= -->
+
+<!-- LIVE PRICES -->
 <section class="live-section">
 
     <div class="live-header">
@@ -64,186 +67,255 @@
         <div class="live-meta">
             <span class="live-dot"></span>
             <span id="lastUpdated">Fetching prices...</span>
-            <button class="refresh-btn" onclick="fetchPrices()">⟳ Refresh</button>
         </div>
+
     </div>
 
     <div id="priceSpinner" class="spinner"></div>
+
     <div id="priceError" class="price-error hidden"></div>
+
     <div class="price-grid" id="priceGrid"></div>
 
 </section>
 
-<!-- ================= TABLE ================= -->
+
+<!-- TABLE -->
 <section class="table-section">
 
-    <h2 class="table-heading">Supported Cryptocurrencies</h2>
+<h2 class="table-heading">
+Supported Cryptocurrencies
+</h2>
 
-    <table class="crypto-table">
-        <thead>
-            <tr>
-                <th>Coin</th>
-                <th>Symbol</th>
-                <th>Live Price (USD)</th>
-                <th>Type</th>
-            </tr>
-        </thead>
+<table class="crypto-table">
 
-        <tbody id="cryptoTableBody">
-            <tr>
-                <td colspan="4">Loading live prices...</td>
-            </tr>
-        </tbody>
-    </table>
+<thead>
+<tr>
+<th>Coin</th>
+<th>Symbol</th>
+<th>Live Price (USD)</th>
+<th>Type</th>
+</tr>
+</thead>
+
+<tbody id="cryptoTableBody">
+<tr>
+<td colspan="4">Loading live prices...</td>
+</tr>
+</tbody>
+
+</table>
 
 </section>
 
-<!-- ================= CTA ================= -->
+
+<!-- CTA (button removed) -->
 <div class="cta-box">
     <h2>Ready to Store Your Crypto?</h2>
-    <p>Download SecureVault and manage your assets securely anytime.</p>
-    <a href="#" class="cta-btn">⬇ Download SecureVault</a>
+    <p>SecureVault helps protect your assets anytime.</p>
 </div>
 
 </main>
 
-<!-- ================= Footer ================= -->
 
+<!-- FOOTER -->
 <footer>
-    <div class="footer-container">
 
-        <!-- Brand -->
-        <div class="footer-brand">
-            <h3>SecureVault</h3>
-            <p>Your trusted digital wallet for crypto, NFTs, and forex. Secure, fast, and reliable.</p>
+<div class="footer-container">
 
-            <div class="social-icons">
-                <a href="#">𝕏</a>
-                <a href="#">f</a>
-                <a href="#">ig</a>
-                <a href="#">in</a>
-            </div>
-        </div>
+<!-- Brand -->
+<div class="footer-brand">
+    <h3>SecureVault</h3>
 
-        <!-- Quick Links -->
-        <div class="footer-col">
-            <h4>Quick Links</h4>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="buy-crypto.html">Buy Crypto</a></li>
-                <li><a href="nfts.html">NFTs</a></li>
-                <li><a href="forex.html">Forex</a></li>
-            </ul>
-        </div>
+    <p>
+        Your trusted digital wallet for crypto, NFTs, and forex.
+        Secure, fast, and reliable.
+    </p>
+</div>
 
-        <!-- Support -->
-        <div class="footer-col">
-            <h4>Support</h4>
-            <p>Need help? Contact us:</p>
-            <a href="mailto:support@securevault.com" class="footer-email">
-                support@securevault.com
-            </a>
-        </div>
 
-        <!-- Download App -->
-        <div class="footer-col">
-            <h4>Download App</h4>
-            <p>Get SecureVault on your device:</p>
+<!-- Quick Links -->
+<div class="footer-col">
 
-            <a href="#" class="app-btn">🍎 Download on iOS</a>
-            <a href="#" class="app-btn">🤖 Get it on Android</a>
-        </div>
+<h4>Quick Links</h4>
 
-    </div>
+<ul>
+<li><a href="index.html">Home</a></li>
+<li><a href="buy-crypto.html">Buy Crypto</a></li>
+<li><a href="nfts.html">NFTs</a></li>
+<li><a href="forex.html">Forex</a></li>
+</ul>
 
-    <div class="footer-bottom">
-        <p>&copy; 2026 SecureVault. All rights reserved.</p>
-    </div>
+</div>
+
+
+<!-- Support -->
+<div class="footer-col">
+
+<h4>Support</h4>
+
+<p>Need help? Contact us:</p>
+
+<a href="mailto:support@securevault.com"
+class="footer-email">
+support@securevault.com
+</a>
+
+</div>
+
+</div>
+
+
+<div class="footer-bottom">
+<p>&copy; 2026 SecureVault. All rights reserved.</p>
+</div>
+
 </footer>
 
-<!-- ================= SCRIPT ================= -->
+
+
 <script>
 
 /* NAV */
 function toggleMenu() {
-    document.querySelector('nav ul').classList.toggle('active');
+document.querySelector('nav ul').classList.toggle('active');
 }
+
 
 /* COINS */
 const coins = [
-    { id: 'bitcoin', symbol: 'BTC', name: 'Bitcoin', icon: '₿', type: 'Digital Currency' },
-    { id: 'ethereum', symbol: 'ETH', name: 'Ethereum', icon: 'Ξ', type: 'Smart Platform' },
-    { id: 'solana', symbol: 'SOL', name: 'Solana', icon: '◎', type: 'Blockchain' }
+
+{
+id:'bitcoin',
+symbol:'BTC',
+name:'Bitcoin',
+icon:'₿',
+type:'Digital Currency'
+},
+
+{
+id:'ethereum',
+symbol:'ETH',
+name:'Ethereum',
+icon:'Ξ',
+type:'Smart Platform'
+},
+
+{
+id:'solana',
+symbol:'SOL',
+name:'Solana',
+icon:'◎',
+type:'Blockchain'
+}
+
 ];
 
-const coinIds = coins.map(c => c.id).join(',');
 
-/* FETCH API */
-async function fetchPrices() {
+const coinIds =
+coins.map(c=>c.id).join(',');
 
-    document.getElementById('priceSpinner').classList.remove('hidden');
-    document.getElementById('priceError').classList.add('hidden');
 
-    try {
-        const res = await fetch(
-            `https://api.coingecko.com/api/v3/simple/price?ids=${coinIds}&vs_currencies=usd&include_24hr_change=true`
-        );
+/* API */
+async function fetchPrices(){
 
-        const data = await res.json();
+document.getElementById('priceSpinner')
+.classList.remove('hidden');
 
-        renderCards(data);
-        renderTable(data);
+document.getElementById('priceError')
+.classList.add('hidden');
 
-        document.getElementById('lastUpdated').textContent =
-            "Updated at " + new Date().toLocaleTimeString();
+try{
 
-    } catch (err) {
-        document.getElementById('priceError').textContent = "⚠ API failed";
-        document.getElementById('priceError').classList.remove('hidden');
-    }
+const res = await fetch(
+`https://api.coingecko.com/api/v3/simple/price?ids=${coinIds}&vs_currencies=usd`
+);
 
-    document.getElementById('priceSpinner').classList.add('hidden');
+const data = await res.json();
+
+renderCards(data);
+
+renderTable(data);
+
+document.getElementById('lastUpdated')
+.textContent =
+"Updated at " +
+new Date().toLocaleTimeString();
+
 }
+
+catch(err){
+
+document.getElementById('priceError')
+.textContent="⚠ API failed";
+
+document.getElementById('priceError')
+.classList.remove('hidden');
+
+}
+
+document.getElementById('priceSpinner')
+.classList.add('hidden');
+
+}
+
 
 /* CARDS */
-function renderCards(data) {
-    const grid = document.getElementById('priceGrid');
+function renderCards(data){
 
-    grid.innerHTML = coins.map(c => {
-        const price = data[c.id]?.usd || "N/A";
+const grid =
+document.getElementById('priceGrid');
 
-        return `
-        <div class="price-card">
-            <div class="price-icon">${c.icon}</div>
-            <div class="price-name">${c.name}</div>
-            <div class="price-symbol">${c.symbol}</div>
-            <div class="price-amount">$${price}</div>
-        </div>
-        `;
-    }).join('');
+grid.innerHTML =
+coins.map(c=>{
+
+const price=
+data[c.id]?.usd || "N/A";
+
+return `
+<div class="price-card">
+<div class="price-icon">${c.icon}</div>
+<div class="price-name">${c.name}</div>
+<div class="price-symbol">${c.symbol}</div>
+<div class="price-amount">$${price}</div>
+</div>
+`;
+
+}).join('');
+
 }
+
 
 /* TABLE */
-function renderTable(data) {
-    const body = document.getElementById('cryptoTableBody');
+function renderTable(data){
 
-    body.innerHTML = coins.map(c => {
-        const price = data[c.id]?.usd || "N/A";
+const body=
+document.getElementById('cryptoTableBody');
 
-        return `
-        <tr>
-            <td>${c.name}</td>
-            <td class="symbol">${c.symbol}</td>
-            <td>$${price}</td>
-            <td>${c.type}</td>
-        </tr>
-        `;
-    }).join('');
+body.innerHTML=
+coins.map(c=>{
+
+const price=
+data[c.id]?.usd || "N/A";
+
+return `
+<tr>
+<td>${c.name}</td>
+<td>${c.symbol}</td>
+<td>$${price}</td>
+<td>${c.type}</td>
+</tr>
+`;
+
+}).join('');
+
 }
+
 
 /* AUTO LOAD */
 fetchPrices();
-setInterval(fetchPrices, 60000);
+
+setInterval(fetchPrices,60000);
 
 </script>
 
