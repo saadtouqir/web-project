@@ -1,238 +1,497 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SecureVault | Support</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="support.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>SecureVault | Support</title>
+
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="support.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
+
 <body>
 
-    <header>
-        <nav>
-            <h2>SecureVault</h2>
-            <div class="hamburger" onclick="toggleMenu()">
-                <div></div>
-                <div></div>
-                <div></div>
-            </div>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li class="dropdown">
-                    <a href="#">Features <span class="arrow">&#9662;</span></a>
-                    <ul class="dropdown-menu">
-                        <li><a href="buy-crypto.html">Buy Crypto</a></li>
-                        <li><a href="nfts.html">NFTs</a></li>
-                        <li><a href="forex.html">Forex</a></li>
-                    </ul>
-                </li>
-                <li><a href="security.html">Security</a></li>
-                <li><a href="support.html" class="active">Support</a></li>
-                <li><a href="register.html">Register</a></li>
-            </ul>
-        </nav>
-    </header>
+<header>
+<nav>
 
-    <main>
+<h2>SecureVault</h2>
 
-        <!-- Hero -->
-        <article class="support-hero">
-            <h1>How Can We Help You?</h1>
-            <p>Our support team is available 24/7 to help you with any questions or issues you may have with your SecureVault wallet.</p>
-        </article>
+<div class="hamburger" onclick="toggleMenu()">
+<div></div>
+<div></div>
+<div></div>
+</div>
 
-        <!-- Contact Cards -->
-        <section class="contact-section">
-            <h2>Get in Touch</h2>
-            <p class="section-desc">Choose the best way to reach us and we will get back to you as soon as possible.</p>
+<ul>
 
-            <div class="contact-grid">
-                <div class="contact-card">
-                    <h3>Email Support</h3>
-                    <p>Send us an email and we will respond within 24 hours.</p>
-                    <a href="mailto:support@securevault.com" class="contact-link">support@securevault.com</a>
-                </div>
-                <div class="contact-card">
-                    <h3>Live Chat</h3>
-                    <p>Chat with our support team in real time during business hours.</p>
-                    <a href="#" class="contact-link">Start Live Chat</a>
-                </div>
-                <div class="contact-card">
-                    <h3>Phone Support</h3>
-                    <p>Call us directly for urgent issues. Available Mon–Fri, 9am–6pm.</p>
-                    <a href="tel:+61290001234" class="contact-link">+61 2 9000 1234</a>
-                </div>
-            </div>
-        </section>
+<li><a href="index.html">Home</a></li>
 
-        <!-- Contact Form -->
-        <section class="support-form-section">
-            <h2>Send Us a Message</h2>
-            <p class="section-desc">Fill out the form below and our team will get back to you shortly.</p>
+<li class="dropdown">
+<a href="#">
+Features <span class="arrow">&#9662;</span>
+</a>
 
-            <form class="support-form" onsubmit="handleSubmit(event)">
-                <div class="form-group">
-                    <label for="s-name">Full Name</label>
-                    <input type="text" id="s-name" placeholder="Enter your full name" required>
-                </div>
-                <div class="form-group">
-                    <label for="s-email">Email Address</label>
-                    <input type="email" id="s-email" placeholder="email@example.com" required>
-                </div>
-                <div class="form-group">
-                    <label for="s-subject">Subject</label>
-                    <select id="s-subject" required>
-                        <option value="">Select a topic</option>
-                        <option value="account">Account Issues</option>
-                        <option value="wallet">Wallet Problems</option>
-                        <option value="transaction">Transaction Help</option>
-                        <option value="security">Security Concern</option>
-                        <option value="other">Other</option>
-                    </select>
-                </div>
-                <div class="form-group">
-                    <label for="s-message">Message</label>
-                    <textarea id="s-message" rows="5" placeholder="Describe your issue in detail..." required></textarea>
-                </div>
-                <button type="submit">Send Message</button>
-                <div id="successMsg" class="success-msg hidden">✅ Your message has been sent! We will get back to you within 24 hours.</div>
-            </form>
-        </section>
+<ul class="dropdown-menu">
+<li><a href="buy-crypto.html">Buy Crypto</a></li>
+<li><a href="nfts.html">NFTs</a></li>
+<li><a href="forex.html">Forex</a></li>
+</ul>
 
-        <!-- FAQ Section -->
-        <section class="faq-section">
-            <h2>Frequently Asked Questions</h2>
-            <p class="section-desc">Find quick answers to the most common questions about SecureVault.</p>
+</li>
 
-            <div class="faq-list">
-                <div class="faq-item">
-                    <button class="faq-question" onclick="toggleFaq(this)">
-                        How do I create a SecureVault wallet?
-                        <span class="faq-arrow">&#9662;</span>
-                    </button>
-                    <div class="faq-answer">
-                        <p>Download the SecureVault app, click "Create Wallet", fill in your details and choose your wallet type. Your wallet will be ready in under 2 minutes.</p>
-                    </div>
-                </div>
-                <div class="faq-item">
-                    <button class="faq-question" onclick="toggleFaq(this)">
-                        Is my crypto safe in SecureVault?
-                        <span class="faq-arrow">&#9662;</span>
-                    </button>
-                    <div class="faq-answer">
-                        <p>Yes. SecureVault uses AES-256 encryption and your private keys are stored only on your device. We never have access to your funds.</p>
-                    </div>
-                </div>
-                <div class="faq-item">
-                    <button class="faq-question" onclick="toggleFaq(this)">
-                        What cryptocurrencies does SecureVault support?
-                        <span class="faq-arrow">&#9662;</span>
-                    </button>
-                    <div class="faq-answer">
-                        <p>SecureVault supports Bitcoin (BTC), Ethereum (ETH), Solana (SOL), Litecoin (LTC), Cardano (ADA), USD Coin (USDC), and many more.</p>
-                    </div>
-                </div>
-                <div class="faq-item">
-                    <button class="faq-question" onclick="toggleFaq(this)">
-                        How do I recover my wallet if I lose my device?
-                        <span class="faq-arrow">&#9662;</span>
-                    </button>
-                    <div class="faq-answer">
-                        <p>SecureVault provides an encrypted cloud backup. Simply install the app on your new device, log in, and restore your wallet using your backup phrase.</p>
-                    </div>
-                </div>
-                <div class="faq-item">
-                    <button class="faq-question" onclick="toggleFaq(this)">
-                        Does SecureVault charge fees?
-                        <span class="faq-arrow">&#9662;</span>
-                    </button>
-                    <div class="faq-answer">
-                        <p>SecureVault is free to download and use. Standard network fees may apply for blockchain transactions, which are set by the network, not SecureVault.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
+<li><a href="security.html">Security</a></li>
 
-    </main>
+<li><a href="support.html" class="active">Support</a></li>
 
-    <footer>
-        <div class="footer-container">
-            <div class="footer-brand">
-                <h3>SecureVault</h3>
-                <p>Your trusted digital wallet for crypto, NFTs, and forex. Secure, fast, and always available.</p>
-                <div class="social-icons">
-                    <a href="#" aria-label="Twitter/X">𝕏</a>
-                    <a href="#" aria-label="Facebook">f</a>
-                    <a href="#" aria-label="Instagram">ig</a>
-                    <a href="#" aria-label="LinkedIn">in</a>
-                </div>
-            </div>
-            <div class="footer-col">
-                <h4>Quick Links</h4>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="buy-crypto.html">Buy Crypto</a></li>
-                    <li><a href="nfts.html">NFTs</a></li>
-                    <li><a href="forex.html">Forex</a></li>
-                    <li><a href="security.html">Security</a></li>
-                    <li><a href="support.html">Support</a></li>
-                </ul>
-            </div>
-            <div class="footer-col">
-                <h4>Support</h4>
-                <p>Have a question? Reach out to us:</p>
-                <a href="mailto:support@securevault.com" class="footer-email">support@securevault.com</a>
-            </div>
-            <div class="footer-col">
-                <h4>Download App</h4>
-                <p>Get SecureVault on your phone:</p>
-                <a href="#" class="app-btn">🍎 Download on iOS</a>
-                <a href="#" class="app-btn">🤖 Get it on Android</a>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            <p>&copy; 2026 Muhammad Saad. All rights reserved.</p>
-        </div>
-    </footer>
+<li><a href="register.html">Register</a></li>
 
-    <script>
-        function toggleMenu() {
-            document.querySelector('nav ul').classList.toggle('active');
-        }
-        document.querySelectorAll('.dropdown > a').forEach(item => {
-            item.addEventListener('click', function(e) {
-                if (window.innerWidth <= 768) {
-                    e.preventDefault();
-                    this.parentElement.classList.toggle('active');
-                }
-            });
-        });
+</ul>
 
-        // FAQ toggle
-        function toggleFaq(btn) {
-            const answer = btn.nextElementSibling;
-            const arrow = btn.querySelector('.faq-arrow');
-            const isOpen = answer.classList.contains('open');
-            document.querySelectorAll('.faq-answer').forEach(a => a.classList.remove('open'));
-            document.querySelectorAll('.faq-arrow').forEach(a => a.style.transform = 'rotate(0deg)');
-            if (!isOpen) {
-                answer.classList.add('open');
-                arrow.style.transform = 'rotate(180deg)';
-            }
-        }
+</nav>
+</header>
 
-        // Form submit
-        function handleSubmit(e) {
-            e.preventDefault();
-            document.getElementById('successMsg').classList.remove('hidden');
-            e.target.reset();
-            setTimeout(() => {
-                document.getElementById('successMsg').classList.add('hidden');
-            }, 5000);
-        }
-    </script>
+
+
+<main>
+
+<!-- HERO -->
+<article class="support-hero">
+
+<h1>How Can We Help You?</h1>
+
+<p>
+Our support team is available 
+to help with any questions or issues related to your SecureVault wallet.
+</p>
+
+</article>
+
+
+
+<!-- CONTACT -->
+<section class="contact-section">
+
+<h2>Get in Touch</h2>
+
+<div class="contact-grid">
+
+<!-- EMAIL -->
+<div class="contact-card">
+
+<h3>Email Support</h3>
+
+<p>
+Send us an email and we will respond
+within 24 hours.
+</p>
+
+<a href="mailto:support@securevault.com"
+class="contact-link">
+support@securevault.com
+</a>
+
+</div>
+
+
+
+<!-- LIVE CHAT (LINK REMOVED) -->
+<div class="contact-card">
+
+<h3>Live Chat</h3>
+
+<p>
+Chat with our support team in real time
+during business hours.
+</p>
+
+<p class="contact-link">
+Live Chat Available During Business Hours
+</p>
+
+</div>
+
+
+
+<!-- PHONE -->
+<div class="contact-card">
+
+<h3>Phone Support</h3>
+
+<p>
+Available Mon–Fri, 9am–6pm.
+</p>
+
+<a href="tel:+61290001234"
+class="contact-link">
++61 2 9000 1234
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- FORM -->
+<section class="support-form-section">
+
+<h2>Send Us a Message</h2>
+
+<p class="section-desc">
+Fill out the form below.
+</p>
+
+
+<form class="support-form"
+onsubmit="handleSubmit(event)">
+
+
+<div class="form-group">
+<label for="s-name">Full Name</label>
+
+<input
+type="text"
+id="s-name"
+placeholder="Enter your full name"
+required>
+
+</div>
+
+
+
+<div class="form-group">
+
+<label for="s-email">
+Email Address
+</label>
+
+<input
+type="email"
+id="s-email"
+placeholder="email@example.com"
+required>
+
+</div>
+
+
+
+<div class="form-group">
+
+<label for="s-subject">
+Subject
+</label>
+
+<select id="s-subject" required>
+
+<option value="">
+Select a topic
+</option>
+
+<option>Account Issues</option>
+<option>Wallet Problems</option>
+<option>Transaction Help</option>
+<option>Security Concern</option>
+<option>Other</option>
+
+</select>
+
+</div>
+
+
+
+<div class="form-group">
+
+<label for="s-message">
+Message
+</label>
+
+<textarea
+id="s-message"
+rows="5"
+placeholder="Describe your issue..."
+required>
+</textarea>
+
+</div>
+
+
+<button type="submit">
+Send Message
+</button>
+
+
+<div id="successMsg"
+class="success-msg hidden">
+
+✅ Your message has been sent.
+
+</div>
+
+</form>
+
+</section>
+
+
+
+<!-- FAQ -->
+<section class="faq-section">
+
+<h2>
+Frequently Asked Questions
+</h2>
+
+<p class="section-desc">
+Find quick answers below.
+</p>
+
+
+<div class="faq-list">
+
+
+<div class="faq-item">
+
+<button class="faq-question"
+onclick="toggleFaq(this)">
+
+How do I create a SecureVault wallet?
+
+<span class="faq-arrow">
+&#9662;
+</span>
+
+</button>
+
+<div class="faq-answer">
+
+<p>
+Download SecureVault,
+click Create Wallet,
+and follow setup.
+</p>
+
+</div>
+
+</div>
+
+
+
+<div class="faq-item">
+
+<button class="faq-question"
+onclick="toggleFaq(this)">
+
+Is my crypto safe?
+
+<span class="faq-arrow">
+&#9662;
+</span>
+
+</button>
+
+<div class="faq-answer">
+
+<p>
+Yes.
+SecureVault uses AES-256 encryption.
+</p>
+
+</div>
+
+</div>
+
+
+
+<div class="faq-item">
+
+<button class="faq-question"
+onclick="toggleFaq(this)">
+
+What cryptocurrencies are supported?
+
+<span class="faq-arrow">
+&#9662;
+</span>
+
+</button>
+
+<div class="faq-answer">
+
+<p>
+BTC, ETH, SOL and more.
+</p>
+
+</div>
+
+</div>
+
+
+</div>
+
+</section>
+
+</main>
+
+
+
+<!-- FOOTER -->
+<footer>
+
+<div class="footer-container">
+
+
+<div class="footer-brand">
+
+<h3>SecureVault</h3>
+
+<p>
+Your trusted digital wallet
+for crypto, NFTs and forex.
+
+Secure, fast, and always available.
+</p>
+
+</div>
+
+
+
+<div class="footer-col">
+
+<h4>Quick Links</h4>
+
+<ul>
+
+<li><a href="index.html">Home</a></li>
+
+<li><a href="buy-crypto.html">Buy Crypto</a></li>
+
+<li><a href="nfts.html">NFTs</a></li>
+
+<li><a href="forex.html">Forex</a></li>
+
+<li><a href="security.html">Security</a></li>
+
+<li><a href="support.html">Support</a></li>
+
+</ul>
+
+</div>
+
+
+
+<div class="footer-col">
+
+<h4>Support</h4>
+
+<p>
+Have a question?
+Reach out to us:
+</p>
+
+<a href="mailto:support@securevault.com"
+class="footer-email">
+support@securevault.com
+</a>
+
+</div>
+
+</div>
+
+
+<div class="footer-bottom">
+
+<p>
+&copy; 2026 SecureVault. All rights reserved.
+</p>
+
+</div>
+
+</footer>
+
+
+
+<script>
+
+function toggleMenu(){
+
+document.querySelector('nav ul')
+.classList.toggle('active');
+
+}
+
+
+document.querySelectorAll('.dropdown > a')
+.forEach(item=>{
+
+item.addEventListener('click',function(e){
+
+if(window.innerWidth<=768){
+
+e.preventDefault();
+
+this.parentElement
+.classList.toggle('active');
+
+}
+
+});
+
+});
+
+
+
+function toggleFaq(btn){
+
+const answer=
+btn.nextElementSibling;
+
+const arrow=
+btn.querySelector('.faq-arrow');
+
+const isOpen=
+answer.classList.contains('open');
+
+document.querySelectorAll('.faq-answer')
+.forEach(a=>a.classList.remove('open'));
+
+document.querySelectorAll('.faq-arrow')
+.forEach(a=>a.style.transform='rotate(0deg)');
+
+if(!isOpen){
+
+answer.classList.add('open');
+
+arrow.style.transform='rotate(180deg)';
+
+}
+
+}
+
+
+
+function handleSubmit(e){
+
+e.preventDefault();
+
+document.getElementById('successMsg')
+.classList.remove('hidden');
+
+e.target.reset();
+
+setTimeout(()=>{
+
+document.getElementById('successMsg')
+.classList.add('hidden');
+
+},5000);
+
+}
+
+</script>
 
 </body>
 </html>
